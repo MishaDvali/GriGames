@@ -1,7 +1,6 @@
 from typing import List
 
-import SudokuLike
-from SudokuLike import *
+from . import *
 class Grid:
     def __init__(self, unsolved:List[List[Cell]], shapes:List[Shape]):
         self.initialBoard:List[List[Cell]] = unsolved
@@ -9,14 +8,13 @@ class Grid:
         self.shapes:List[Shape] = shapes
 
     def solve(self) -> Grid:
-         raise NotImplementedError()
-         #todo
+         raise NotImplementedError() #todo
 
     def reset(self) -> None:
-        raise NotImplementedError #todo
+        raise NotImplementedError() #todo
 
     def insert(self, val:int, x:int, y:int) -> None:
-        self.board[x][y].setTo(val)
+        self.board[x][y].Set(val)
 
     def isValid(self) -> bool:
         for shape in self.shapes:

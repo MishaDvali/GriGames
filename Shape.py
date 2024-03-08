@@ -1,7 +1,8 @@
 from ShapeRules  import ShapeRules
-from typing import list
+from Cell import Cell
+from typing import List
 
 class Shape:
-    def __init__(self, cells:list, rules:ShapeRules):
-        self.cells:list = cells
+    def __init__(self, cells:List[Cell], rules:ShapeRules):
+        self.cells:List[Cell] = cells
         self.rules:ShapeRules = rules
